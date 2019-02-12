@@ -2,4 +2,4 @@
 
 ### Data Analytics Boot Camp Course Learning ###
 
-**Bootcamp Spot**
+- Prework for class
