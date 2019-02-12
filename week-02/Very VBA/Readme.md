@@ -1,6 +1,6 @@
 ### Very VBA ###
 
-The following **required** concepts has been coverd in this class:
+The following **concepts** has been coverd in this class:
 
 * [x] VBA basics
 	* [-] variables
@@ -49,4 +49,43 @@ The following **required** concepts has been coverd in this class:
 			MsgBox x * y
 		End Sub
 		```
-* [x] 
+* [x] Excercise
+	* [-] Hello world program
+	```
+	Sub Helloworld():
+    	MsgBox ("HelloWorld1")
+	End Sub
+	```
+	* [-] Hello world program
+	```
+	Sub Helloworld():
+    	MsgBox ("HelloWorld1")
+	End Sub
+	```
+
+## Video Walkthrough of concepts:
+
+Here's a walkthrough of implemented basic cases:
+
+1. Hello World
+![Hello World](vba_helloworld.gif)
+
+2. Button Click
+![Button Click](vba_buttonclick.gif)
+
+3. Cells function
+![Cells function](vba_cells.gif)
+
+4. Range function
+![Range function](vba_range.gif)
+
+5. Variables
+![Variables](vba_cells.gif)
+
+6. Arrays
+![Arrays](vba_arrays.gif)
+
+7. Split function
+![Split function](vba_split.gif)
+
+GIF created with [LiceCap](http://www.cockos.com/licecap/).
