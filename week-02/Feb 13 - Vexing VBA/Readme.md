@@ -1,9 +1,9 @@
-### Very VBA ###
+### Vexing VBA ###
 
 The following **concepts** has been coverd in this class:
-* Feb-11-2019
+* Feb-13-2019
 
-* [x] VBA basics
+* [x] VBA basics - practice programs
 	* [-] variables
 		* [-] variable declaration
 		```
@@ -69,6 +69,6 @@ The following **concepts** has been coverd in this class:
     	MsgBox ("HelloWorld1")
 	End Sub
 	```
-- VBA ref file 
+- VBA ref file (https://github.com/dvinay/ucb-extension/blob/master/week-02/Feb%2013%20-%20Vexing%20VBA/template.vbs)
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
