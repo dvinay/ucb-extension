@@ -70,5 +70,3 @@ The following **concepts** has been coverd in this class:
 	End Sub
 	```
 - VBA ref file (https://github.com/dvinay/ucb-extension/blob/master/week-02/Feb%2013%20-%20Vexing%20VBA/template.vbs)
-
-GIF created with [LiceCap](http://www.cockos.com/licecap/).
