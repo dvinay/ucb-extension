@@ -24,6 +24,10 @@ The following **concepts** has been coverd in this class:
 		ingredients(1) = "Jelly"
 		ingredients(2) = "Bread"
 		```
+		```
+		Dim words() As String
+		words = Split("This is a sample line", " ")
+		```
 	* [-] conditions
 		* [-] If This... Then That.
 		```
@@ -31,6 +35,7 @@ The following **concepts** has been coverd in this class:
 			stopSpreading()
 		Else
 			startSpreading()
+		End If
 		```
 	* [-] Iteration
 		* [-] For loop
@@ -45,6 +50,7 @@ The following **concepts** has been coverd in this class:
 		Function Area(x As Double, y As Double) As Double
 			Area = x * y
 		End Function
+
 		Sub Area(x As Double, y As Double)
 			MsgBox x * y
 		End Sub
@@ -87,5 +93,11 @@ Here's a walkthrough of implemented basic cases:
 
 7. Split function
 ![Split function](vba_split.gif)
+
+7. If statement
+![If statement](vba_if.gif)
+
+7. For loop
+![For loop](vba_loop.gif)
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
