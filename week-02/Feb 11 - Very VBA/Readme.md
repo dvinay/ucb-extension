@@ -1,6 +1,7 @@
 ### Very VBA ###
 
 The following **concepts** has been coverd in this class:
+* Feb-11-2019
 
 * [x] VBA basics
 	* [-] variables
