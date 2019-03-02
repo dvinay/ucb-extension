@@ -42,6 +42,7 @@ with open(csvpath, 'rt') as csvfile:
     # Read each row of data after the header
     previousProfitValue = 0
     maxProfitIncrease = 0
+    profitChange = 0
     minProfitDecrease = 0
     for row in csvreader:
         currentDate = str(row[0])
@@ -49,6 +50,9 @@ with open(csvpath, 'rt') as csvfile:
         total_months = total_months + 1
         total += currentProfit
         profitIncrease = currentProfit-previousProfitValue
+        # print(f"profitIncrease {profitIncrease}")
+        # print(f"profitChange {profitChange}")
+        profitChange += profitIncrease
         profitDecrease = previousProfitValue-currentProfit
         if isLess(maxProfitIncrease,profitIncrease) :
             maxProfitIncrease = profitIncrease
@@ -57,4 +61,5 @@ with open(csvpath, 'rt') as csvfile:
             minProfitDecrease = profitDecrease 
             minProfitDate = currentDate
         previousProfitValue = currentProfit # set previousProfitValue for next iteration
+    # print(f"profitChange : {profitChange}")
     generateReport(total_months,total,maxProfitDate,maxProfitIncrease,minProfitDate,minProfitDecrease)
