@@ -33,6 +33,7 @@ The following **concepts** has been coverd in this class:
         - click New and select python 3
         
         ```
+        
 ## Video Walkthrough of concepts:
     * [-] How to run pandas in jupyter notbook 
     ![Panda example](jn_example.gif)
