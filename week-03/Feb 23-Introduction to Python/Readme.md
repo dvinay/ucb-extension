@@ -87,3 +87,77 @@ The following **concepts** has been coverd in this class:
         else:
             print(name + " does not have a group")
         ```
+    * [-] list example
+      * [-] Create a variable and set it as an List
+      ```
+        myList = [1,"Sample",3,"Test"]
+        print(myList)
+      ```
+      * [-] Add an element onto the end of a List
+      ```
+        myList.append("Matt")
+        print(myList)
+      ```
+      * [-] Return the index of the first object with a matching value
+      ```
+        print(myList.index("Matt"))
+      ```
+      * [-] Change a specified element within an List at the given index
+      ```
+        myList[3] = 85
+        print(myList)
+      ```
+      * [-] Returns the length of the List
+      ```
+        print(len(myList))
+      ```
+      * [-] Removes a specified object from an List
+      ```
+        myList.remove("Matt")
+        print(myList)
+      ```
+      * [-] Removes the object at the index specified
+      ```
+        myList.pop(0)
+        myList.pop(0)
+        print(myList)
+      ```
+    * [-] tuple example
+      * [-] Creates a tuple, a sequence of immutable Python objects that cannot be changed
+      ```
+        myTuple = ('Python', 100, 'VBA', False)
+        print(myTuple)
+      ```
+    * [-] for loop
+      * [-] to repeat a set of data
+      ```
+        myList = [1,"Sample",3,"Test"]
+        for data in myList:
+          print(data)
+      ```
+      * [-] to repeat all characters in the string
+      ```
+        data = "Vinay"
+        for ltr in data:
+            print(ltr)
+      ```
+    * [-] while loop
+      * [-] to repeat until a certain condition is true
+      ```
+        x = 'y'
+        while x == 'y':
+            x = input("want to continue [y/n]")
+            print("you have selected : "+ x)
+      ```
+      
+* [x] Excercise
+  * [-] Helloworld
+  * [-] variable example and print using string concatenation
+  * [-] f-string example
+  * [-] input from user example using input() and int(input())
+  * [-] Rock paper scissors game
+    * [-] learning random module
+    * [-] conditions
+  * [-] display numbers from given range and ask user want to continue or not
+    * [-] for loop with range
+    * [-] while loop to check condition
