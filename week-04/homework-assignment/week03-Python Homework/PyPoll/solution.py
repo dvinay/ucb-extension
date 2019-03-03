@@ -1,48 +1,65 @@
-# find The average of the changes in "Profit/Losses" over the entire period
-# export result to file
+# PyPoll Solution
 
 import os
+import math
 import csv
 import re
 
-def generateReport(total_months,total,maxProfitDate,maxProfitIncrease,minProfitDate,minProfitDecrease):
-    print ("\nFinancial Analysis ")
-    print ("---------------------------- ")
-    print (f"Total Months: {total_months}")
-    print (f"Total: ${total}")
-    # find avg
-    print (f"Greatest Increase in Profits: {maxProfitDate} (${maxProfitIncrease})")
-    print (f"Greatest Decrease in Profits:: {minProfitDate} ($-{minProfitDecrease})")
+# generate the report content
+def generateReportContent(total_votes, candidates, candidates_count):
+    precision = 3
+    result = ""
+    for i in range(len(candidates)):
+        percentage = int(candidates_count[i])/int(total_votes)*100
+        result = result + f"{candidates[i]}: {'{:.{}f}'.format( percentage, precision )}% ({candidates_count[i]})\n"
+    
+    data = "\nElection Results \n" + "-------------------------\n" + f"Total Votes: {total_votes}\n" + "-------------------------\n" + result + "-------------------------\n" + f"Winner: {candidates[candidates_count.index(max(candidates_count))]}\n" + "-------------------------\n"
+    return data
 
-def isLess(src, comp): 
-    return src < comp
+# display the report to terminal
+def displayReport(data):
+    print (data)
 
+# write Report to File
+def writeReportFile(data):
+    output_file_path = os.path.join('.','Resources','result.txt')
+    with open(output_file_path, 'w') as resultfile:
+        resultfile.write (data)
+        resultfile.close()
+
+# Read the input file
 csvpath = os.path.join('.','Resources','election_data.csv')
 with open(csvpath, 'rt') as csvfile:
-    total_months = 0
-    total = 0
+    # The total number of votes cast
+    total_votes = 0
+    candidates = ["Khan","Correy","Li","O'Tooley"]
+    candidates_count = [0,0,0,0]
 
     # Read object to read csv file
     csvreader = csv.reader(csvfile, delimiter=',')
     # Read the header row first (skip this step if there is now header)
     csv_header = next(csvreader)
     # print(f"CSV Header: {csv_header}")
-    # Read each row of data after the header
-    previousProfitValue = 0
-    maxProfitIncrease = 0
-    minProfitDecrease = 0
+    
+    # A complete list of candidates who received votes
     for row in csvreader:
-        currentDate = str(row[0])
-        currentProfit = int(row[1])
-        total_months = total_months + 1
-        total += currentProfit
-        profitIncrease = currentProfit-previousProfitValue
-        profitDecrease = previousProfitValue-currentProfit
-        if isLess(maxProfitIncrease,profitIncrease) :
-            maxProfitIncrease = profitIncrease
-            maxProfitDate = currentDate
-        if isLess(minProfitDecrease, profitDecrease):
-            minProfitDecrease = profitDecrease 
-            minProfitDate = currentDate
-        previousProfitValue = currentProfit # set previousProfitValue for next iteration
-    generateReport(total_months,total,maxProfitDate,maxProfitIncrease,minProfitDate,minProfitDecrease)
+        total_votes = total_votes + 1
+        if(row[2] == candidates[0]):
+            candidates_count[0] = candidates_count[0]+1
+        elif(row[2] == candidates[1]):
+            candidates_count[1] = candidates_count[1]+1
+        elif(row[2] == candidates[2]):
+            candidates_count[2] = candidates_count[2]+1
+        elif(row[2] == candidates[3]):
+            candidates_count[3] = candidates_count[3]+1
+        else:
+            print("candidate not found ${row[2]}")
+
+    # prepare the report result content
+    result = generateReportContent(total_votes, candidates, candidates_count)
+    
+    # display the report to terminal
+    displayReport(result)
+
+    # write Report to File
+    writeReportFile(result)
