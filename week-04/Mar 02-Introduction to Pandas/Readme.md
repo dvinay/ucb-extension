@@ -12,6 +12,7 @@ The following **concepts** has been coverd in this class:
         # run jupyter notebook to run local server
         $ jupyter notebook
         ```
+        
     * [-] How to access jupyter notbook server
         ```
         # Open browser and goto local host
