@@ -21,6 +21,9 @@ The following **concepts** has been coverd in this class:
         ```
     * [-] How to run pandas in jupyter notbook
         ```
+        # how to create a conda env for run jupyter
+        conda create -n PythonData python=3.6 anaconda
+        
         # activate anaconda env using command promopt
         $ source activate PythonData
 
