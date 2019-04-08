@@ -9,3 +9,4 @@
 - [Week-04](https://github.com/dvinay/ucb-extension/tree/master/week-04)
 - [Week-05](https://github.com/dvinay/ucb-extension/tree/master/week-05)
 - [Week-06](https://github.com/dvinay/ucb-extension/tree/master/week-06)
+- [Week-09 SQL](https://github.com/dvinay/ucb-extension/tree/master/week-09)
